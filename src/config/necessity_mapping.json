@@ -1,0 +1,15 @@
+{
+    "Needs": [
+      "Groceries",
+      "Transportation",
+      "Wellbeing/Health Care"
+    ],
+    "Wants": [
+      "Restaurants",
+      "Shopping",
+      "Travel",
+      "Miscellaneous",
+      "Recreation/entertainment"
+    ]
+  }
+  

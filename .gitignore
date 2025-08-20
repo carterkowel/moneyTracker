@@ -1,0 +1,7 @@
+# Ignore data folder contents, but not demo_data
+/src/data/*
+!/src/data/demo_data/
+!/src/data/demo_data/**
+ 
+# Ignore virtual environment
+.venv/

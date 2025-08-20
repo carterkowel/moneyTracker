@@ -1,0 +1,27 @@
+[
+    {
+      "name": "BMO Cashback",
+      "annual_cost": 0,
+      "grocery_rate": 3,
+      "other_rate": 0.5
+    },
+    {
+      "name": "Scotia Momentum Visa",
+      "annual_cost": 0,
+      "grocery_rate": 1,
+      "other_rate": 0.5
+    },
+    {
+        "name": "Scotia Scene Visa",
+        "annual_cost": 0,
+        "grocery_rate": 1,
+        "other_rate": 1
+      },
+    {
+      "name": "Custom",
+      "annual_cost": null,
+      "grocery_rate": null,
+      "other_rate": null
+    }
+  ]
+  
