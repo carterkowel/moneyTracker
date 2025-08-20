@@ -5,3 +5,6 @@
  
 # Ignore virtual environment
 .venv/
+
+# Ignore mac ds store files
+.DS_Store
