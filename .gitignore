@@ -1,10 +1,11 @@
-# Ignore data folder contents, but not demo_data
+# Ignore data folder contents, but not demo
 /src/data/*
-!/src/data/demo_data/
-!/src/data/demo_data/**
+!/src/data/demo/
+!/src/data/demo/**
  
-# Ignore virtual environment
+# Ignore environment variables and virtual environment
 .venv/
+.env
 
 # Ignore mac ds store files
 .DS_Store
