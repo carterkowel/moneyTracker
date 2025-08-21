@@ -5,10 +5,8 @@ import pandas as pd
 from dash import html, Input, Output, State, callback
 from contextlib import redirect_stdout
 
-
-from utils import process_uploaded_statements, update_root_csv, assign_categories, assign_necessities, read_root_csv, CLEANED_DIR
+from utils import process_uploaded_statements, update_root_csv, assign_categories, assign_necessities, read_root_csv, PERSONAL_DIR
 from .components import load_card_currentness, load_root_table
-
 
 def render_summary_and_table(is_editor_mode):
     """Read the root CSV and return both summary cards and table."""
@@ -22,7 +20,7 @@ def save_table_to_csv(table_data):
     """Save edited table data to root.csv and re-assign necessities."""
     df = pd.DataFrame(table_data)
 
-    root_csv_path = os.path.join(CLEANED_DIR, "root.csv")
+    root_csv_path = os.path.join(PERSONAL_DIR, "root.csv")
 
     df = assign_necessities(df)
     df.to_csv(root_csv_path, index=False)
@@ -75,7 +73,7 @@ def run_statement_updater(n_clicks, stored_df_json):
         df = pd.read_json(stored_df_json, orient='split')
         with redirect_stdout(f):
             script_dir = os.path.dirname(os.path.abspath(__file__))
-            root_csv_path = os.path.join(CLEANED_DIR, "root.csv")
+            root_csv_path = os.path.join(PERSONAL_DIR, "root.csv")
 
             categorized_df = assign_categories(df)
             full_categorized_df = assign_necessities(categorized_df)

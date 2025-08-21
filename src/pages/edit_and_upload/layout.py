@@ -1,16 +1,23 @@
 import dash
 from dash import html, dcc
 import dash_bootstrap_components as dbc
-import dash_daq as daq
 import pandas as pd
 
-
+from config.settings import DEMO_MODE
 from utils import read_root_csv
-from .components import load_card_currentness, load_root_table, upload_statements, editor_toggle
+from .components import (
+    load_card_currentness,
+    load_root_table,
+    upload_statements,
+    editor_toggle,
+    get_demo_banner
+)
 from . import callbacks
 
+# Load initial data
 initial_df = read_root_csv()
 
+# Register page
 dash.register_page(
     __name__,
     path="/",
@@ -21,10 +28,12 @@ layout = html.Div([
     dcc.Store(id='csv-updated-flag', storage_type='memory'),
     dcc.Location(id="url", refresh=False),
 
+    get_demo_banner(),
+
     html.H1("Edit & Upload"),
     html.Hr(),
 
-    upload_statements(),
+    upload_statements(disabled=DEMO_MODE),
 
     html.Div(
         load_card_currentness(initial_df),
@@ -35,18 +44,20 @@ layout = html.Div([
     html.Hr(),
     html.H4("Edit Transactions"),
 
+
     dbc.Button(
         "Upload & Auto-Categorize Processed Transactions",
         id="run-updater-btn",
         color="success",
-        className="mt-3"
+        className="mt-3",
+        disabled=DEMO_MODE
     ),
     html.Div(
         id="run-updater-output",
         style={"whiteSpace": "pre-wrap", "marginTop": "1rem"}
     ),
 
-    editor_toggle(),
+    editor_toggle(disabled=DEMO_MODE),
 
     html.Div(
         load_root_table(initial_df),
@@ -54,5 +65,5 @@ layout = html.Div([
         style={"marginTop": "1rem"}
     ),
 
-    dcc.Store(id="temp-df-store", storage_type="memory"),
+    dcc.Store(id="temp-df-store", storage_type='memory'),
 ])

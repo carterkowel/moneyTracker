@@ -7,7 +7,8 @@ import plotly.express as px
 import base64
 import datetime
 import io
-
+import os
+from dotenv import load_dotenv
 
 from components import navbar, footer
 

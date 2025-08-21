@@ -1,4 +1,4 @@
-from utils.data_io import read_root_csv, write_root_csv, CLEANED_DIR
+from utils.data_io import read_root_csv, write_root_csv, PERSONAL_DIR
 from utils.statement_proccesor import process_uploaded_statements
 from utils.root_data_updater import update_root_csv
 from utils.categorizer import assign_categories, assign_necessities
