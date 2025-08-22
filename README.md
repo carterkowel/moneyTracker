@@ -1,4 +1,4 @@
-# 💳 moneyTracker
+# moneyTracker
 
 **moneyTracker** is a multipage interactive dashboard built with [Dash](https://dash.plotly.com/) that makes tracking your expenses and analyzing spending habits effortless.  
 
@@ -6,18 +6,18 @@ It allows you to upload your credit card statements, categorize transactions, ex
 
 ---
 
-## 🌐 Live Demo  
+## Live Demo  
 
-👉 [Try the live demo here](https://ckowel01.pythonanywhere.com)  
+[Try the live demo here](https://ckowel01.pythonanywhere.com)  
 
-> The demo version includes **fake credit card data** for you to explore all the app’s features.  
+> The demo version includes **simulated credit card data** for you to explore all the app’s features.  
 > (Uploading your own statements is disabled in demo mode.)
 
 ---
 
-## 🚀 Features
+## Features
 
-### 📂 Edit & Upload
+### Edit & Upload
 - Drag-and-drop or upload **PDF credit card statements** or **CSV/Excel transaction exports**.
 - Automatically extracts useful transaction data.
 - **Auto-categorizes** transactions using keyword detection.
@@ -26,7 +26,7 @@ It allows you to upload your credit card statements, categorize transactions, ex
 
 ---
 
-### 📊 Analysis
+### Analysis
 - Explore your stored spending data interactively.
 - Adjust the timeline (all data, last 12 months, custom year).
 - Filter transactions by **category**, **necessity (needs vs wants)**, or **credit card**.
@@ -36,7 +36,7 @@ It allows you to upload your credit card statements, categorize transactions, ex
 
 ---
 
-### 💵 Tools / Credit Card Cashback Calculator
+### Tools / Credit Card Cashback Calculator
 - Quickly estimate how much cashback you’d earn with various credit cards.
 - Compare against your actual spending data.
 - Helps decide whether to:
@@ -46,7 +46,7 @@ It allows you to upload your credit card statements, categorize transactions, ex
 
 ---
 
-### 📈 Tools / 50-30-20 Budgeting
+### Tools / 50-30-20 Budgeting
 - Simple tool that compares your spending habits against the **50/30/20 rule**:
   - **50% Needs**
   - **30% Wants**
@@ -55,15 +55,17 @@ It allows you to upload your credit card statements, categorize transactions, ex
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **[Dash](https://dash.plotly.com/)** — multipage dashboard framework.
 - **[Plotly](https://plotly.com/python/)** — interactive data visualization.
+- **[PythonAnywhere](https://www.pythonanywhere.com/)** — python cloud hosting tool.
 - **Pandas** — transaction parsing and data wrangling.
 - **PDF/CSV/Excel parsing** utilities for transaction ingestion.
 - **Bootstrap (via dash-bootstrap-components)** — responsive layout and styling.
 
 ---
-## 📦 Installation
+
+## Installation
 
 > **Note**: Currently, moneyTracker is only compatible with **Scotiabank** and **BMO** credit card statements and CSV/Excel exports.
 
@@ -104,3 +106,12 @@ Once running, open your browser and go to:
 http://127.0.0.1:8050/
 ```
 _(or use the link provided in your terminal after running the app)_
+
+---
+
+## Acknowledgements
+
+This project was inspired and guided by several excellent resources:
+
+- [Bradley Erickson’s Dash App Structure Repository](https://github.com/bradley-erickson/dash-app-structure) and his [Dash App Best Practices Blog Post](https://community.plotly.com/t/structuring-a-large-dash-application-best-practices-to-follow/62739) were both extremely useful in getting started with Dash and in keeping the project clean and organized. Thank you for your contributions to the community.  
+- [Dylan Castillo’s Real Python article on Dash](https://realpython.com/python-dash/) was a great introduction to the framework and provided the idea to utilize PythonAnywhere for deployment.  
