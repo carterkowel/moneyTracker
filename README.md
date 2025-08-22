@@ -6,6 +6,15 @@ It allows you to upload your credit card statements, categorize transactions, ex
 
 ---
 
+## 🌐 Live Demo  
+
+👉 [Try the live demo here](https://ckowel01.pythonanywhere.com)  
+
+> The demo version includes **fake credit card data** for you to explore all the app’s features.  
+> (Uploading your own statements is disabled in demo mode.)
+
+---
+
 ## 🚀 Features
 
 ### 📂 Edit & Upload
